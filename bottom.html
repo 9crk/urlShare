@@ -1,19 +1,14 @@
-
-            var u = navigator.userAgent, isAndroid, isIOS
-
-            window.onload = function() {
-                init()
-            }
-
-            function init() {
-                isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端
-                isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-
-                var link = isIOS ? iosLinkUrl : androidLinkurl
-
-                $('a').attr('href', link)
-            }
-
-        </script>
-    </body>
+if(isAndroid==1){
+    // 替换安卓下载地址
+    window.location.href=androidLinkUrl
+}
+else(
+    // 替换苹果ios的下载地址
+    window.location.href=iosLinkUrl
+)
+}
+//		alert('是否是Android：'+isAndroid);
+//		alert('是否是iOS：'+isiOS);
+</script>
+</body>
 </html>
